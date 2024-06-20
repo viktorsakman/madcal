@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/nameoftheclass"
+            android:layout_width="341dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Name of the class:"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/class_name"
+            android:layout_width="338dp"
+            android:layout_height="62dp"
+            android:ems="10"
+            android:hint="Enter Class Name Here"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameoftheclass" />
+
+        <TextView
+            android:id="@+id/daystext"
+            android:layout_width="342dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="4dp"
+            android:text="Select the days, and fill in the from and to hours:"
+            android:gravity="center"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/class_name" />
+
+        <!-- Monday Elements _________________________________________________ -->
+
+        <CheckBox
+            android:id="@+id/monday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="24dp"
+            android:text="Monday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/daystext" />
+
+        <TextView
+            android:id="@+id/monday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <TextView
+            android:id="@+id/monday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <EditText
+            android:id="@+id/monday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <EditText
+            android:id="@+id/monday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <EditText
+            android:id="@+id/monday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <RadioGroup
+            android:id="@+id/monday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot">
+
+            <RadioButton
+                android:id="@+id/monday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+            <RadioButton
+                android:id="@+id/monday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/monday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot">
+
+            <RadioButton
+                android:id="@+id/monday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+            <RadioButton
+                android:id="@+id/monday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/monday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <!-- ________________________________________________________________ -->
+        <!-- Tuesday Elements _________________________________________________ -->
+        <CheckBox
+            android:id="@+id/tuesday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="144dp"
+            android:text="Tuesday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_dot" />
+
+        <TextView
+            android:id="@+id/tuesday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+        <TextView
+            android:id="@+id/tuesday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+
+        <EditText
+            android:id="@+id/tuesday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+
+        <EditText
+            android:id="@+id/tuesday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+
+        <EditText
+            android:id="@+id/tuesday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/tuesday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot">
+
+
+            <RadioButton
+                android:id="@+id/tuesday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/tuesday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/tuesday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot">
+
+
+            <RadioButton
+                android:id="@+id/tuesday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/tuesday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/tuesday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+        <!-- ________________________________________________________________ -->
+        <!-- Wednesday Elements _________________________________________________ -->
+
+        <CheckBox
+            android:id="@+id/wednesday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="144dp"
+            android:text="Wednesday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_dot" />
+
+        <TextView
+            android:id="@+id/wednesday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+
+        <TextView
+            android:id="@+id/wednesday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+
+        <EditText
+            android:id="@+id/wednesday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+
+        <EditText
+            android:id="@+id/wednesday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+
+        <EditText
+            android:id="@+id/wednesday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/wednesday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot">
+
+
+            <RadioButton
+                android:id="@+id/wednesday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/wednesday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/wednesday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot">
+
+
+            <RadioButton
+                android:id="@+id/wednesday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/wednesday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/wednesday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+        <!-- ________________________________________________________________ -->
+        <!-- Thursday Elements _________________________________________________ -->
+        <CheckBox
+            android:id="@+id/thursday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="136dp"
+            android:text="Thursday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_dot" />
+
+        <TextView
+            android:id="@+id/thursday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+
+        <TextView
+            android:id="@+id/thursday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+
+        <EditText
+            android:id="@+id/thursday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+
+        <EditText
+            android:id="@+id/thursday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+
+        <EditText
+            android:id="@+id/thursday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/thursday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot">
+
+
+            <RadioButton
+                android:id="@+id/thursday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/thursday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/thursday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot">
+
+
+            <RadioButton
+                android:id="@+id/thursday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/thursday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/thursday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+        <!-- ________________________________________________________________ -->
+        <!-- Friday Elements _________________________________________________ -->
+
+
+        <CheckBox
+            android:id="@+id/friday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="140dp"
+            android:text="Friday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_dot" />
+
+        <TextView
+            android:id="@+id/friday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+
+        <TextView
+            android:id="@+id/friday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+
+        <EditText
+            android:id="@+id/friday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+
+        <EditText
+            android:id="@+id/friday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+
+        <EditText
+            android:id="@+id/friday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/friday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot">
+
+
+            <RadioButton
+                android:id="@+id/friday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/friday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/friday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot">
+
+
+            <RadioButton
+                android:id="@+id/friday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/friday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/friday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+        <!-- ________________________________________________________________ -->
+        <!-- Saturday Elements _________________________________________________ -->
+
+
+        <CheckBox
+            android:id="@+id/saturday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="148dp"
+            android:text="Saturday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friday_dot" />
+
+        <TextView
+            android:id="@+id/saturday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+
+        <TextView
+            android:id="@+id/saturday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+
+        <EditText
+            android:id="@+id/saturday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+
+        <EditText
+            android:id="@+id/saturday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+
+        <EditText
+            android:id="@+id/saturday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/saturday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot">
+
+
+            <RadioButton
+                android:id="@+id/saturday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/saturday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/saturday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot">
+
+
+            <RadioButton
+                android:id="@+id/saturday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/saturday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/saturday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+        <!-- ________________________________________________________________ -->
+        <!-- Sunday Elements _________________________________________________ -->
+
+
+        <CheckBox
+            android:id="@+id/sunday_dot"
+            android:layout_width="343dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="152dp"
+            android:text="Sunday"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_dot" />
+
+        <TextView
+            android:id="@+id/sunday_from_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+
+        <TextView
+            android:id="@+id/sunday_to_semicolon"
+            android:layout_width="13dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:text=":"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+
+        <EditText
+            android:id="@+id/sunday_to_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+
+        <EditText
+            android:id="@+id/sunday_to_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="84dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+
+        <EditText
+            android:id="@+id/sunday_from_minute"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Min"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+
+        <RadioGroup
+            android:id="@+id/sunday_from_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot">
+
+
+            <RadioButton
+                android:id="@+id/sunday_from_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/sunday_from_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/sunday_to_group"
+            android:layout_width="157dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="92dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot">
+
+
+            <RadioButton
+                android:id="@+id/sunday_to_am_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="AM" />
+
+
+            <RadioButton
+                android:id="@+id/sunday_to_pm_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="PM" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/sunday_from_hour"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:hint="Hour"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+        <!-- ________________________________________________________________ -->
+
+        <Button
+            android:id="@+id/save_class_button"
+            android:layout_width="193dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="144dp"
+            android:text="Save Class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_dot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
