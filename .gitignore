@@ -1,5 +1,5 @@
 .gitignore
-/key
+key
 Project_Poster.png
 *.iml
 .gradle
