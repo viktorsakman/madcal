@@ -1,5 +1,6 @@
-/.gitignore
-/Project_Poster.png
+.gitignore
+/key
+Project_Poster.png
 *.iml
 .gradle
 /local.properties
