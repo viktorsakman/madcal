@@ -77,7 +77,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         random = new Random();
 
         if (!Places.isInitialized()) {
-            Places.initialize(requireContext(), "AIzaSyDlyJg8OpAM2n5HLmuxH4pOfH_LUpMXbmc");
+            Places.initialize(requireContext(), "[INSERT GOOGLE MAPS API KEY HERE]");
         }
         placesClient = Places.createClient(getContext());
 
