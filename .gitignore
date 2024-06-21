@@ -1,5 +1,7 @@
-.gitignore
+# Ignore API key file
 key
+
+# Ignore IntelliJ IDEA and Android Studio project files
 *.iml
 .gradle
 /local.properties
@@ -9,7 +11,11 @@ key
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# Ignore macOS file
 .DS_Store
+
+# Ignore build directories
 /build
 /captures
 .externalNativeBuild
